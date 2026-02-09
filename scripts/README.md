@@ -6,27 +6,27 @@
 
 ## Setup Instructions
 
-### Option 1: Using psql (Recommended)
+### Option 1: Using psql
 
 1. **Create the database:**
-```bash
+```
    psql -U postgres -d postgres -f 01_create_database.sql
 ```
 
 2. **Create the schemas:**
-```bash
+```
    psql -U postgres -d datawarehouse -f 02_create_schemas.sql
 ```
 
 ### Option 2: Using pgcli
 
 1. **Create the database:**
-```bash
+```
    pgcli -U postgres -d postgres < 01_create_database.sql
 ```
 
 2. **Create the schemas:**
-```bash
+```
    pgcli -U postgres -d datawarehouse < 02_create_schemas.sql
 ```
 
@@ -63,7 +63,7 @@ WHERE schema_name IN ('bronze', 'silver', 'gold');
 
 ## Warning
 
-⚠️ **CAUTION**: Running `01_create_database.sql` will **DROP** the existing `datawarehouse` database and all its data. Ensure you have backups before proceeding.
+Running `01_create_database.sql` will **DROP** the existing `datawarehouse` database and all its data. Ensure you have backups before proceeding.
 
 ## Troubleshooting
 
