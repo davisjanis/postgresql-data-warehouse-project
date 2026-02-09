@@ -3,6 +3,9 @@
 Welcome to the **Data Warehouse and Analytics Project** repository! 
 This project demonstrates a data warehousing and analytics solution, from building a data warehouse to generating actionable insights. 
 
+Personal Notion site for project management:
+https://celestial-badge-693.notion.site/Data-Warehouse-Project-2fd6c23abbb480d78ac0e2782481840a?pvs=74
+
 ---
 
 ## Project Requirements
