@@ -1,7 +1,7 @@
 # Data Warehouse and Analytics Project
 
-Welcome to the **Data Warehouse and Analytics Project** repository! 
-This project demonstrates a data warehousing and analytics solution, from building a data warehouse to generating actionable insights. 
+Welcome to the **Data Warehouse and Analytics Project** repository. 
+This project demonstrates a data warehouse and analytics solution, from building a data warehouse to generating actionable insights. 
 
 Personal Notion site for project management:
 
