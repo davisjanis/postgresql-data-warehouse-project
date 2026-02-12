@@ -18,8 +18,52 @@ Returns:
     
 Usage Example:
     SELECT bronze.load_bronze();
+
+===============================================================================
+IMPORTANT: CSV File Loading and PostgreSQL Permissions
+===============================================================================
+When using the COPY command to load CSV files, PostgreSQL requires read access 
+to the file system location where the CSV files are stored. You may encounter 
+permission errors such as:
+
+    ERROR: could not open file "/path/to/file.csv" for reading: 
+    Permission denied
+
+PostgreSQL runs under a specific user account (typically 'postgres') that may 
+not have permission to access files in arbitrary directories on your system.
+
+RECOMMENDED SOLUTION:
+Place your CSV files inside the PostgreSQL installation directory where the 
+PostgreSQL user already has read permissions.
+
+Example location (adjust based on your installation):
+    /Library/PostgreSQL/18/datasets/
+
+Directory structure:
+    /Library/PostgreSQL/18/datasets/
+    ├── source_crm/
+    │   ├── cust_info.csv
+    │   ├── prd_info.csv
+    │   └── sales_details.csv
+    └── source_erp/
+        ├── loc_a101.csv
+        ├── cust_az12.csv
+        └── px_cat_g1v2.csv
+
+ALTERNATIVE SOLUTIONS:
+1. Grant PostgreSQL user read permissions to your file location:
+   - Linux/Mac: chmod and chown commands
+   - Windows: Folder properties > Security settings
+
+2. Use COPY FROM STDIN instead of COPY FROM file (requires application code)
+
+3. Use psql's \copy command (runs with client permissions, not server)
+
+For this project, we use the recommended approach of storing datasets in the 
+PostgreSQL directory for simplicity.
 ==================================================================================
 */
+
 CREATE OR REPLACE FUNCTION bronze.load_bronze()
 RETURNS void
 LANGUAGE plpgsql
