@@ -6,7 +6,7 @@ This project demonstrates a data warehouse and analytics solution with PotgreSQL
 
 ---
 # Data Architecture
---
+
 The data architecture for this project follows Medallion Architecture - having Bronze, Silver, and Gold layers:
 <img width="1134" height="633" alt="Medallion-3" src="https://github.com/user-attachments/assets/1a062ff4-6c2d-4861-985d-abae76a80787" />
 
@@ -16,13 +16,12 @@ Gold Layer: Houses business-ready data modeled into a star schema required for r
 
 ---
 # Project Overview
---
 
 If you want to gain basic understanding of Data Engineering foundations with SQL, this repository is for you.
 Use it together with my Notion site, to get deeper details about each project's phase.
 This project is mostly based on this [repository](https://github.com/DataWithBaraa/sql-data-warehouse-project/tree/main), but adjusted for the PostgreSQL database.
 
---
+
 This project involves:
 
 1. **Data Architecture**: Designing a Modern Data Warehouse using Medallion Architecture - having Bronze, Silver, and Gold layers.
