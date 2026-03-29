@@ -13,12 +13,15 @@ The data architecture for this project follows Medallion Architecture - having B
 Bronze Layer: Stores raw data as-is from the source systems. Data is ingested from CSV Files into PostgreSQL database.
 Silver Layer: This layer includes data cleansing, standardization, and normalization processes to prepare data for analysis.
 Gold Layer: Houses business-ready data modeled into a star schema required for reporting and analytics. 
+
 ---
 # Project Overview
 --
+
 If you want to gain basic understanding of Data Engineering foundations with SQL, this repository is for you.
 Use it together with my Notion site, to get deeper details about each project's phase.
-This project is mostly based on [repository](https://github.com/DataWithBaraa/sql-data-warehouse-project/tree/main) , but adjusted for the PostgreSQL database.
+This project is mostly based on this [repository](https://github.com/DataWithBaraa/sql-data-warehouse-project/tree/main), but adjusted for the PostgreSQL database.
+
 --
 This project involves:
 
@@ -26,7 +29,7 @@ This project involves:
 2. **ETL Pipelines**: Extracting, transforming, and loading data from source systems into the data warehouse.
 3. **Data Modeling**: Developing fact and dimension tables optimized for analytical queries.
 4. **Analytics & Reporting**: Creating SQL-based reports and dashboards for actionable insights.
-
+   
 ---
 # Important Links
 
@@ -45,6 +48,7 @@ This project involves:
 ### Building the Data Warehouse (Data Engineering)
 
 ### Objective
+
 Develop a modern data warehouse using PostgreSQL to consolidate sales data, enabling analytical reporting and informed decision-making.
 
 ### Specifications
@@ -62,6 +66,7 @@ Develop a modern data warehouse using PostgreSQL to consolidate sales data, enab
 ### BI: Analytics & Reporting (Data Analysis)
 
 ### Objective
+
 Develop SQL-based analytics to deliver detailed insights into:
 
 - **Customer Behavior**
