@@ -30,6 +30,31 @@ This project involves:
 2. **ELT Pipelines**: Extracting, transforming, and loading data from source systems into the data warehouse.
 3. **Data Modeling**: Developing fact and dimension tables optimized for analytical queries.
 4. **Analytics & Reporting**: Creating SQL-based reports and dashboards for actionable insights.
+
+**Important Notice about - why ELT instead of ETL?**:
+
+Someone just getting into the field of data engineering, and having some familiarity with core concepts and definitions - might raise the question, could this project represent ETL pipeline instead of ELT?
+
+The answer is: 
+Depends on perspective.
+
+To clarify: 
+The Medallion architecture inside a single database sits in a grey zone, and whether you call it ETL or ELT depends on where you draw the system boundary.
+
+Perspective: 
+
+Some practitioners and architects describe the Medallion architecture as
+- Bronze = landing / staging zone ( the "load" of raw data )
+- Silver = transformation
+- Gold = the final load into the serving layer for cosumers
+
+Under this view, Gold is the true destination, and everything before it is preparation. So the pipeline reads as ETL - you're transforming before delivering the final, loaded, business-ready data.
+
+The reason why I see ELT is the more dominant label for this pattern:
+Because the entire transformation chain - Bronze -> Silver -> Gold - happens inside the same database engine. There's no external transformation tool. PostgreSQL is doing all the work throughout. 
+
+Takeaway:
+ETL vs ElT as labels were coined before the Medallion architecture existed. They don't map perfectly onto it. In practice, most data engineers working with bronze/silver/gold inside a single database call it ELT - but if someone calls it ETL focusing on the gold layer as the destination, they're not wrong either.
    
 ---
 # Important Links
@@ -41,10 +66,17 @@ This project involves:
 ## Project Requirements
 
 - Familiarity with SQL language
+- Datasets — source CSV files (provided in /datasets folder of this repository)
 - PostgreSQL 16+ — database engine
-- pgAdmin 4 (optional) — GUI for database management and query execution
-- Dataset — source CSV files (provided in /datasets folder of this repository)
-- PostgreSQL configured with correct file paths — required for COPY command to ingest CSV files into bronze layer:
+- pgAdmin 4 — GUI for database management and query execution
+  
+OR, if you prefer working solely from terminal:
+
+- psql command-line tools (comes with PostgreSQL installation) - a command line interface for running SQL queries
+     - Add PostgreSQL to the system PATH to ensure the psql is globally                            accessible for local CSV ingestion via the \copy command
+- pgcli (optional) - a command line interface with auto-completion and syntax highlighting
+      - Same here, ensure that pgcli is globally accessible in your PATH
+
 
 ### Building the Data Warehouse
 
@@ -60,9 +92,7 @@ Develop a modern data warehouse using PostgreSQL to consolidate sales data, enab
 - **Scope**: Focus on the latest dataset only; historization of data is not required.
 - **Documentation**: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
 
-
 ---
-
 
 ### BI: Analytics & Reporting (Data Analysis)
 
