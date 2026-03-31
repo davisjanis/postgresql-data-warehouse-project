@@ -19,7 +19,7 @@ Gold Layer: Houses business-ready data modeled into a star schema required for r
 ---
 # Project Overview
 
-If you want to gain basic understanding of Data Engineering foundations with SQL, this repository is for you.
+If you want to gain basic understanding of data engineering foundations with SQL, this repository is for you.
 Use it together with my Notion site, to get deeper details about each project's phase.
 This project is mostly based on this [repository](https://github.com/DataWithBaraa/sql-data-warehouse-project/tree/main), but adjusted for the PostgreSQL database.
 
@@ -27,7 +27,7 @@ This project is mostly based on this [repository](https://github.com/DataWithBar
 This project involves:
 
 1. **Data Architecture**: Designing a Modern Data Warehouse using Medallion Architecture - having Bronze, Silver, and Gold layers.
-2. **ETL Pipelines**: Extracting, transforming, and loading data from source systems into the data warehouse.
+2. **ELT Pipelines**: Extracting, transforming, and loading data from source systems into the data warehouse.
 3. **Data Modeling**: Developing fact and dimension tables optimized for analytical queries.
 4. **Analytics & Reporting**: Creating SQL-based reports and dashboards for actionable insights.
    
@@ -42,11 +42,11 @@ This project involves:
 
 - Familiarity with SQL language
 - PostgreSQL 16+ — database engine
-- pgAdmin 4 — GUI for database management and query execution
+- pgAdmin 4 (optional) — GUI for database management and query execution
 - Dataset — source CSV files (provided in /datasets folder of this repository)
 - PostgreSQL configured with correct file paths — required for COPY command to ingest CSV files into bronze layer:
 
-### Building the Data Warehouse (Data Engineering)
+### Building the Data Warehouse
 
 ### Objective
 
