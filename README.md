@@ -3,12 +3,12 @@
 Welcome to the **PostgreSQL Data Warehouse and Analytics Project** repository.
 
 This project demonstrates a data warehouse and analytics solution with PotgreSQL, from building a data warehouse to generating actionable insights. 
+<img width="1258" height="683" alt="Medallion1 drawio" src="https://github.com/user-attachments/assets/11140583-0607-4e7a-a7c4-7944d277e64e" />
 
 ---
 # Data Architecture
 
 The data architecture for this project follows Medallion Architecture - having Bronze, Silver, and Gold layers:
-<img width="1134" height="633" alt="Medallion-3" src="https://github.com/user-attachments/assets/1a062ff4-6c2d-4861-985d-abae76a80787" />
 
 Bronze Layer: Stores raw data as-is from the source systems. Data is ingested from CSV Files into PostgreSQL database.
 
