@@ -81,6 +81,8 @@ OR, if you prefer working solely from terminal:
 
 ### Building the Data Warehouse
 
+For detailed information how to recreate this data warehouse on your system use the following [documentation](https://github.com/davisjanis/postgresql-data-warehouse-project/blob/main/how_to_use_repo.md)
+
 ### Objective
 
 Develop a modern data warehouse using PostgreSQL to consolidate sales data, enabling analytical reporting and informed decision-making.
