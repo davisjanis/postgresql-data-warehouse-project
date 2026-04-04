@@ -58,6 +58,7 @@ Example location (adjust based on your installation):
     /Library/PostgreSQL/18/datasets/
 
 Directory structure:
+
     /Library/PostgreSQL/18/datasets/
     ├── source_crm/
     │   ├── cust_info.csv
